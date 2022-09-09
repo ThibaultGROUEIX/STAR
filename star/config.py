@@ -20,9 +20,15 @@
 # Ahmed A. A. Osman
 
 import os
-path_male_star = ''
-path_female_star = ''
-path_neutral_star = ''
+from pathlib import Path
+import sys
+from os.path import join
+base_dir = join(Path(__file__).parent.parent.parent, "star_models")
+
+
+path_male_star = join(base_dir, "male", "model.npz")
+path_female_star = join(base_dir, "female", "model.npz")
+path_neutral_star = join(base_dir, "neutral", "model.npz")
 
 data_type = 'float32'
 
